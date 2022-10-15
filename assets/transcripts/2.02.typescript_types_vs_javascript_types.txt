@@ -1,0 +1,68 @@
+So we already see how TypeScript can help us during development.
+Now we also know that there is a number type in JavaScript and we can see it with the built in type
+of operator.
+This is now not TypeScript specific.
+This is a built in operator and keyword supported by JavaScript.
+We can use it to get the type of a certain value.
+So here we could console.log type of number one.
+And what we'll see if we do that is that as soon as we compile this so that we run the updated code.
+Here we print number two to console.
+Now we do that thanks to this output here and thanks to the type of operator and in vanilla JavaScript
+without TypeScript, we could use that to always improve our function here.
+We could check if type of number is equal to number excuse me, type of and one, I mean, if that is
+equal to number.
+And we could also check if type of end two is equal to number and only perform our operation here if
+it is and otherwise throw an error or do the opposite and check if it's not equal or if and two is not
+equal.
+And if either of the two is not a number, then we could throw a new error where we say incorrect input.
+This actually would be a non typescript way of ensuring that we can't call this function with a string
+here.
+If I do this now and I recompile, we get our typescript error, but let's ignore it for now.
+If we rerun this, we get the incorrect input which we're throwing ourselves.
+So now we hardened this function in JavaScript.
+It fails at runtime, but failing might here be better than showing an incorrect output, which we had
+before.
+So this would be a way of checking the inputs in just JavaScript.
+You don't need TypeScript for that.
+That's regular JavaScript code.
+But of course this approach has downsides.
+Sometimes it's the right thing to do.
+Sometimes you only can validate certain inputs at runtime.
+But the downside is here.
+We're checking something which we actually can avoid during development with TypeScript.
+So yes, we're throwing an error and in our application we might have built in measures that can then
+fall back to some other behavior to save the running application.
+But still we're throwing an error which is really not necessary to occur in the first place.
+We could have prevented it with TypeScript, and here we really see the difference between JavaScript
+and TypeScript.
+When it comes to types, JavaScript is dynamically typed, which means it's perfectly fine that we have
+the variable which initially might hold a number where we later assign a string to it.
+And that's why we have the type of operator so that we can check the current type of something at runtime
+if we have some code that depends on a certain type.
+TypeScript, on the other hand, is statically type, which means we define the types of variables and
+parameters and so on.
+During development, they don't suddenly change during runtime.
+Now, of course, since TypeScript is compiled to JavaScript, they theoretically could, but if we
+use TypeScript and we write code where we suddenly assign a new type of data into a variable where we
+previously set that this should be a number, for example, and now we're assigning a string, then
+we get an error during development so that we are forced to be clear regarding the types something can
+or cannot hold.
+That's the difference here.
+So we don't really want to use implementations or solutions like that if we can avoid it.
+With TypeScript still, it's important to know that JavaScript, of course, knows about the concept
+of types.
+It knows about some types like number, string and boolean.
+But using that always means that we can only fail at runtime instead of during development, which is
+a better place for us as a developer.
+It allows us to fix bugs earlier and in addition, JavaScript only knows about a couple of types.
+As you will learn throughout this course, TypeScript knows about way more types than JavaScript.
+So it is.
+Runtime checking is really not as flexible or not as powerful as what we can do with TypeScript.
+And for all these reasons, this approach is actually not the approach we want to use here.
+Sometimes it can be useful to get the type at runtime, but sometimes like in this example, it's way
+better to get it during development.
+The only important thing to recognize, of course, just is that with TypeScript you only get the support
+during development, not at runtime, because these TypeScript features and checks are not built into
+the JavaScript engine.
+So that logic can't execute in the browser.
+It can only execute during development when you compile your code.

@@ -1,0 +1,181 @@
+Here is this same example.
+Basically, in a real project, you find this simple project, the index HTML file and this JavaScript
+file attached to this video in a zip file, you can simply open this and then open the index HTML file.
+You can also open the code in any text editor of your choice here.
+I'm using Visual Studio code and I will come back to my exact setup later in this module.
+For now, you can just open these two text files with any text editor.
+Now what you'll find in there is this JavaScript file which interacts with this index HTML file, and
+in that index HTML file you'll find two inputs and a button and any JavaScript file which gets imported
+here.
+We basically reach out to these elements.
+Then we have a function here and an event listener on the button that triggers the function and locks
+the result of the function here in the console.
+Now, if we simply open that index HTML file by double clicking on it in the Windows Explorer or the
+Mac Finder so that it opens up in a browser.
+What you'll see is this the two inputs and the add button.
+And here I opened the browser developer tools as well.
+Now if you enter ten and five here, for example, you might expect to see 15 as a result here on the
+right, but instead you see 105.
+And this shows us a weakness of JavaScript here.
+This is not a technical error.
+It's not an error which is thrown, but it's a logical error in our application.
+Now, where is this error coming from, though?
+Well, here in JavaScript, I reach out to these two inputs, and when the button is clicked, in the
+end, I get the values of the two input elements and I pass them here to add.
+And here it's important to know that in JavaScript, when you access the value of an input element,
+it's always a string, always, no matter which type of input this is.
+If this is of type number or not, it's always a string.
+So I'm passing into strings to this function in the end.
+And if you add two strings in JavaScript, they get concatenated instead of added mathematically, which
+is why we see 105, ten and five concatenated.
+This is the issue with JavaScript here, and this is something where TypeScript can help us now.
+Without TypeScript, we could of course add if check here and check if the type of num one is equal
+to number.
+And if the type of num two is equal to number, and if that is the case, then I return my calculation
+like this.
+Else I might throw an error, or I at least convert both to numbers by adding a plus in front of each
+parameter here.
+Now, this is some code we could write, maybe a bit more refined than this in JavaScript.
+And with that we would ensure that we convert numbers or the inputs to numbers if they are not numbers
+yet.
+So with that, if I reload this and I repeat this, now we get 15 because of our changed code.
+So of course we can do it as in JavaScript.
+And this is vanilla JavaScript, nothing TypeScript ish about it.
+But we wrote some extra code for an error, which I actually would like to prevent in the first place.
+I don't want that this happens.
+I want to make sure that we can't even pass strings here to add, because ADD should be a function that
+only operates a numbers so that in there we don't need to check whether we get a number or not.
+So I want to keep this function in the state it was before.
+I want this function here just like this.
+And that is where TypeScript can help us.
+So TypeScript can help us in such situations as I just showed.
+Now, in order to see how it helps us, let's install it.
+So on typescript lang dot org you can click on download and there you'll learn how to install it and
+we will actually install it with this command which uses the NPM tool.
+And the NPM tool is part of the notorious package.
+So even though we're not going to write Node.js code here, we still need to install Node.js simply
+because behind the scenes that will also be used by some tools we use.
+And when we install Node.js, we also install NPM, the node package manager, a tool which we then
+can use to install TypeScript globally on our machine.
+So simply visit Node talk and they're installed.
+A latest version you find here, simply click on this button.
+It will then download and installer.
+You can walk through that installer.
+It is supported for all operating systems and once you have no trace installed, you will be able to
+run this command.
+Simply open up your normal terminal or command prompt and then copy in that command.
+Important on Mac and Linux, you might need to add pseudo in front of this to get the right permissions
+on windows.
+This will not be required, so simply make sure you then install TypeScript with this command.
+Enter your password in case you should be prompted for it.
+And with that you got TypeScript installed globally on your machine.
+Now what does this mean TypeScript installed?
+Well, remember that TypeScript is a programming language, but it's only a programming language that
+works because we also have this compiler, this tool which compiles it to JavaScript.
+So in the end, what we installed here is the compiler and everything it needs to know to understand
+TypeScript code to convert it to JavaScript.
+So with this we have the compiler installed and we can run the TSC command now which invokes this TypeScript
+compiler to compile a TypeScript file to JavaScript.
+So to see this in this project we worked on, let's simply add a new file using tests, for example,
+any name you want, but the extension should be Dot's, which stands for TypeScript.
+Now let's copy that JavaScript code into the TypeScript file here in Visual Studio code, I immediately
+get some errors which we now will fix.
+And this is one great advantage of TypeScript if you're using the right IDE.
+And my strong recommendation really is a Visual Studio code and I will come back to it later.
+Then you already get great support in the IDE when working inside of TypeScript files here already.
+It basically lets TypeScript analyze my code and identifies some weaknesses, which is great because
+that's exactly what I want.
+So here in this example, let me delete the JavaScript only JS file.
+And with that, some of the errors are gone because it identified that some constants and so on were
+used in multiple files.
+But it still gives me an error down there.
+And what you see, for example, is that it's not sure if there really is a value property.
+Now, that's a mistake I didn't even consider before in JavaScript.
+But it's true.
+I'm selecting an element by ID here.
+Now, TypeScript can't know if this will really work.
+Maybe I have a typo in here.
+In this case, I wouldn't be able to select an element.
+This element simply wouldn't exist on the page, so we might have a typo in typescript.
+Does not analyze your HTML code to find out if this works.
+So for one, this might fail.
+But even if it succeeds and we select an element there, it doesn't have to be an input element.
+It could be any other element.
+And most HTML elements don't have a value property you can access.
+And this already is great.
+TypeScript forces us to be more explicit, to be clearer about our intentions and to double check our
+code.
+And for example, here and you don't need to understand all that syntax, we will learn it step by step
+throughout the course.
+But for example, here we could let TypeScript know that we are sure that we will get an element by
+adding an exclamation mark.
+This basically tells TypeScript this will never yield null.
+This will always find an element.
+And as a developer, I of course know that this will always find an element because I double checked
+that ID and I see.
+Yep, I have that ID here.
+Now in addition, I also know it will always be an input element so we can use as a HTML input element,
+a syntax called typecasting, which I will also explain in greater detail later to let TypeScript know
+which type of element this will be, we can apply this to the second element as well.
+So just to be really clear here, this is TypeScript syntax.
+I can use this exclamation mark here and I can use this typecasting here because we are in a dot's file,
+we are in a typescript file.
+We will compile this to JavaScript.
+This would not work in vanilla JavaScript.
+This is not available there.
+With this, we are forced to be clearer about our intentions and to really think about our code and
+double check it, which is great, but that's not even the biggest advantage.
+The biggest advantage is the addition of types.
+That is what gives TypeScript its name, after all.
+And here I'm not saying anything about the types of data this function operates on.
+If we hover over one of these parameters, we see this anything here, and in the end this is TypeScript
+saying to us, I don't know what's in there.
+It could be any type of value.
+Now we can add a more explicit type in TypeScript files, so not in JavaScript files, but in TypeScript
+files by adding a colon here and then specifying the type, for example, number, doing this here and
+doing this here with this extra syntax which TypeScript, which is compiler understands.
+We're telling TypeScript that this here will be of type number and this will be of type number.
+And therefore now we get an error here again and we don't just get this error in the E, by the way,
+we also get it if we try to compile this code, because that is ultimately what we need to do right
+now.
+To compile this, I will open a terminal and here I'm just opening my terminal or command prompt which
+is integrated into this IDE.
+It's the regular system command prompt, the regular system terminal I was using here as well just already
+navigate it into this folder.
+So if you are not using some built in IDE terminal, you can use your regular one, but CD navigate
+into that extracted starting folder where you added your typescript file and once you are in that folder
+you can run as C that will invoke this TypeScript compiler we installed earlier on using tests.
+And if you run this, you will actually get an error.
+You will still get a JavaScript file because by default TypeScript will still compile it to JavaScript.
+You will also learn how to suppress this later in the course, but it gives you a compiler error while
+doing so.
+It tells you that argument of type string is not assignable to parameter of type number.
+So the problem here is that TypeScript understands that what we get on the value property of our input
+element will be a string.
+We all see this here in the IDE.
+And we can't pass this to Ed because there we don't want a string, we want a number.
+So we have to fix this by, for example, converting this to a number here by adding a plus.
+And as soon as we do this, we can compile this code again by repeating that command, and now it compiles
+without errors.
+It gives us this using TypeScript JavaScript file and now it shows some errors again because it doesn't
+understand that it will never use both files at the same time.
+Here again, this is all something which will get better later in the course.
+Once we configure this, we can ignore this for now.
+So it gives me this file and if we open this, we see something interesting in here.
+We see that there, of course, our types are gone.
+This cost in here is gone.
+We have vanilla JavaScript again.
+So if we have a look at our typescript file here, we see that there we have all these nice additions,
+but as I mentioned, these are just TypeScript features.
+When you compile to JavaScript, they are used to evaluate your code and to find potential errors,
+but then they are stripped out and we get regular JavaScript as output.
+So now we can go to our index HTML file and import using ts dot js and that's important.
+Always import JavaScript files because the browser can't run typescript, we need to import the result
+of our compilation.
+And now with that, if we reload this.
+We have our working code because now we have proper JavaScript code where we fixed this issue by casting
+our inputs before we pass them to the function.
+But we were able to fix these issues because of our type annotations here.
+And as you saw, we had to write some other parts of the code in a cleaner way as well.
+And that is why TypeScript is amazing.
+It forces us to write better, cleaner and less error prone code.

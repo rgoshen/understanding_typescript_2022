@@ -1,0 +1,41 @@
+TypeScript is amazing, but in order to work with it efficiently, I strongly recommend that you also
+have a powerful code editor, a powerful IDE.
+And here my clear recommendation is Visual Studio code.
+It's free to use and it has amazing TypeScript support built in.
+Now you still need to install the TypeScript compiler and we already did this, but this has the built
+in support which shows you a lot of errors directly in the IDE before you even compiled the project.
+So you can simply visit Code Dot Visual Studio and there you can download it for any operating system
+and simply walk through the installer there to get this modern IDE.
+Now it is the IDE I will be using throughout this course and you can fine tune and configure it to your
+requirements and needs.
+Here are just some settings I'm using.
+Under code preferences you can change the color theme and there I am using the dark plus theme.
+So if you want the exact same look, that's the theme I'm using.
+But of course you can also play around with any other theme here.
+I also installed certain extensions, so third party plug ins, so to say, which change the appearance
+or behavior of the editor.
+You can click on view and then extensions to be taken to the extensions menu or the marketplace.
+And it's all free.
+No worries.
+Nothing here costs you money.
+Now, I got tons of extensions installed, but the extensions I would recommend that you definitely
+have a look at is EE as lint that you install this to get linking to good code quality check support
+in your projects and that you install the material icon theme if you like these file icons I have in
+my project, that's a pure visual thing.
+Of course, it doesn't change any behaviors and I can also recommend Path IntelliSense so that later
+in the course, once we work with imports, you get better supports there.
+And prettier, which helps you format your code so that it always looks nice and is readable, prettier
+works together with a certain shortcut which you should be aware of under preferences.
+Keyboard shortcuts there.
+If you search for format document this shortcut here is a shortcut.
+You can always press in your code to auto format it to add missing semicolons to make sure you use the
+right indentation everywhere, things like that.
+It makes your code more readable and your life as a developer easier.
+And that's it.
+You can always install DT as lint, but that will be merged with S lint in the future.
+So ESPN should be all you really need.
+With that, we can go back to Vue Explorer and you should have the same settings I have here, but also
+dive into the settings in general and explore them and fine tune everything to your needs and to your
+likings.
+And with that you have a great editor which allows you to write great code, powerful code with a lot
+of built in TypeScript support, and you're well prepared to get the most out of this course.

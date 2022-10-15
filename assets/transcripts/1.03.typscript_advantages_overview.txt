@@ -1,0 +1,36 @@
+So you saw TypeScript in action, and it offers great advantages.
+It makes writing clean code really easier.
+TypeScript adds types and data is super important with types.
+We have to be way more explicit about how things work, and we can avoid many unexpected and unnecessary
+errors by using types.
+In addition to that, we also can use ides modern ides which have built in TypeScript support which
+can pick up on these types and give us better auto completion and built in errors which show before
+we even compile the code because they also understand TypeScript.
+But besides the types and the huge advantages we get alone by using types, we also get our features
+added by TypeScript.
+We can use certain next generation JavaScript features which you can write and use in our typescript
+files, and then they will get compiled down to JavaScript code to work around that, even work in older
+browsers.
+If you know Babel, which is a tool that allows us to do that with vanilla JavaScript as well, it's
+a bit like that just already built into TypeScript.
+We can use modern JavaScript features and still produce and ship code that works in older browsers as
+well.
+TypeScript also adds certain features which only TypeScript understands like interfaces and generics.
+These are features which can't be compiled to JavaScript, but they don't have to because they are features
+that help us during development, that give us clearer errors and help us avoid even more errors.
+So it even adds more features on that front.
+Besides the types we already learned about, it also gives us certain meta programming features like
+decorators on which I have a whole module in this course where you will understand what exactly decorators
+are, why they are so meta, and why they are amazing.
+TypeScript also is highly configurable.
+We didn't configure it thus far, but I have a whole module in the course where we talk only about the
+compiler and how to configure it and you can really fine tune it to your requirements to make it stricter
+or looser and to ensure that it behaves in exactly the way you want it to behave.
+And with modern tooling, with modern IDs, you even get support in non typescript projects.
+The IDE you just saw Visual Studio code that even gives you better support in plain JavaScript files
+because it is able to use some typescript features under the hood without you explicitly using TypeScript.
+So that's a free gain.
+You get out of the box when being aware of TypeScript and when using modern tools.
+So there are many reasons for using TypeScript, and that's probably why you took this course.
+In this course, we will now learn it step by step, and we will learn all about the amazing features
+it adds.
