@@ -12,6 +12,9 @@ Click [here](https://www.udemy.com/course/understanding-typescript/) to see the 
     - [Installing & Using TypeScript](#installing--using-typescript)
     - [TypeScript Advantages - Overview](#typescript-advantages---overview)
   - [Section 2: TypeScript Basics & Basic Types](#section-2-typescript-basics--basic-types)
+    - [Using Types](#using-types)
+    - [TypeScript Types vs. JavaSCript Types](#typescript-types-vs-javascript-types)
+    - [Type Casing](#type-casing)
   - [Section 3: The TypeScript Compiler (and its Configuration)](#section-3-the-typescript-compiler-and-its-configuration)
   - [Section 4: Next-generation JavaScript & TypeScript](#section-4-next-generation-javascript--typescript)
   - [Section 5: Classes & Interfaces](#section-5-classes--interfaces)
@@ -107,6 +110,72 @@ TypeScript adds:
   - IDEs are able to use some TS features under the hood with out you explicitly using TS
 
 ## Section 2: TypeScript Basics & Basic Types
+
+### Using Types
+
+**Core Types**
+
+- number: 1, 5.3, -10
+  - all numbers, no differentiation between integersor floats
+- string: 'Hi', "Hi", `Hi`
+  - all text values
+- boolean: true, false
+  - just these two, no "truthy" or "falsey" values
+
+```typescript
+const add = (n1: number, n2: number) => n1 + n2;
+
+const num1 = 5;
+const num2 = 2.8;
+
+const result = add(num1, num2);
+
+console.log(result);
+```
+
+TypeScript only helps us during compilation. This means TypeScript's type system only helps during development (i.e. before code gets compiled)
+
+:heavy_exclamation_mark: Remember browsers do not have built in support for TS
+
+> :paperclip: **NOTE**: don't have a TS file open along with its JS file - could cause errors fo duplicate functions
+
+### TypeScript Types vs. JavaSCript Types
+
+```typescript
+const add = (n1: number, n2: number) => {
+  // console.log('n1:', typeof n1);
+  // console.log('n2:', typeof n2);
+
+  // JavaScript way
+  // if (typeof n1 !== 'number' || typeof n2 !== 'number') {
+  //   throw new Error('Incorrect input!');
+  // }
+
+  return n1 + n2;
+};
+
+const number1 = 5;
+const number2 = 2.8;
+
+const result = add(number1, number2);
+console.log(result);
+```
+
+JS is dynamically typed (variables can switch types at anytime, resolved at runtime)
+
+TS is statically typed (variables are declared a type and must always be that type during the life of the app running, set during development)
+
+### Type Casing
+
+> **:heavy_exclamation_mark: Important: Type Casing**
+>
+> In TypeScript, you work with types like `string` or `number` all the time.
+>
+> **:heavy_exclamation_mark: Important**:
+>
+> It is `string` and `number` (etc.), **NOT** `String`, `Number`, etc.
+
+**The core primitive types in TypeScript are all lowercase!**
 
 ## Section 3: The TypeScript Compiler (and its Configuration)
 
