@@ -1,0 +1,115 @@
+So what is TypeScript?
+
+What is it all about?
+
+Why would we use it?
+
+TypeScript is a JavaScript superset.
+
+Now, what does this mean?
+
+It means that TypeScript is, in the end, a language, a programming language, building up on JavaScript.
+
+It's not a brand new language.
+
+Instead, it takes the JavaScript language and adds new features and advantages to it.
+
+It makes writing JavaScript code easier and more powerful, you could say, but we have one huge disadvantage.
+
+TypeScript can't be executed by JavaScript environments like the browser.
+
+Browsers can't execute TypeScript and for example, Node.js also can't execute TypeScript.
+
+So the environments where we can execute JavaScript don't support TypeScript.
+
+What's the idea behind TypeScript then?
+
+It's a better version of JavaScript and we can't use it.
+
+Well, not quite.
+
+TypeScript is a programming language, but it's also a tool.
+
+It's a powerful compiler which you run over your code to compile your typescript code to JavaScript.
+
+So what you get as a result when writing code in TypeScript is JavaScript.
+
+But you didn't write that JavaScript code.
+
+You wrote TypeScript code with all the new features and all the advantages, and you get normal JavaScript
+
+code.
+
+Well, that of course, brings up one important question How can TypeScript add new features if what
+
+you get in the end is regular JavaScript?
+
+And the answer is the TypeScript compiler compiles these new features to JavaScript workarounds.
+
+So in the end, it might give you a nicer syntax, an easier way of doing something, and it will then
+
+compile that nicer, easier way to a more complex JavaScript snippet, which you would have to write
+
+otherwise.
+
+So it's not magic, of course, it can't add what's not possible at all in the JavaScript language,
+
+but it can add new features that simply are easier to use, nicer syntax, things like this.
+
+In addition, TypeScript, of course, does one important thing which the name already implies.
+
+It adds types.
+
+It adds a feature to the JavaScript language editor, which will have a close look in a second, which
+
+will actually give you as a developer an opportunity of identifying errors in your code earlier before
+
+your script runs and the error occurs at runtime in the browser.
+
+So it does not only give you some new features and nicer ways of doing something, it also gives you
+
+extra error checking where errors which you would otherwise get as runtime errors can be caught and
+
+fixed early during development.
+
+So why would we use TypeScript?
+
+Consider this example a fairly simple JavaScript function which adds to numbers.
+
+Now, when I call it, please notice that I'm passing in two strings instead of two numbers, and I'll
+
+show you a real example where something like this could happen realistically in just a second.
+
+So we're calling this function with two strings, and as a result, what you would actually get here
+
+is probably an unwanted behavior, because if you add two strings, JavaScript will concatenate the
+
+strings instead of doing a mathematical calculation here.
+
+So the result would not be five but 23, a concatenated string of the two numbers.
+
+This is an error you could have in JavaScript.
+
+It's not a technical error.
+
+You probably won't get a runtime error, but you have a logical mistake in your code.
+
+And that of course can lead to huge problems in the web applications you're writing with JavaScript
+
+now, of course, in JavaScript we have mitigation strategies.
+
+We could add an if check in the function to check the types of the inputs at runtime.
+
+We could also validate and sanitize user input.
+
+And whilst we might want to do all of that, it would also be nice if we could catch errors like this
+
+during development already.
+
+And thankfully this is possible with TypeScript because developers can write invalid code here and introduce
+
+blocks like this and JavaScript.
+
+And with TypeScript we have a tool that helps us write better code and avoid such problems.
+
+So let's have a closer look at this.
