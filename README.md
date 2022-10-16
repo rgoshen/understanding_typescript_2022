@@ -16,6 +16,7 @@ Click [here](https://www.udemy.com/course/understanding-typescript/) to see the 
     - [TypeScript Types vs. JavaSCript Types](#typescript-types-vs-javascript-types)
     - [Type Casing](#type-casing)
     - [Working with Numbers, Strings and Booleans](#working-with-numbers-strings-and-booleans)
+    - [Type Assignment & Type Inference](#type-assignment--type-inference)
   - [Section 3: The TypeScript Compiler (and its Configuration)](#section-3-the-typescript-compiler-and-its-configuration)
   - [Section 4: Next-generation JavaScript & TypeScript](#section-4-next-generation-javascript--typescript)
   - [Section 5: Classes & Interfaces](#section-5-classes--interfaces)
@@ -184,6 +185,32 @@ TS is statically typed (variables are declared a type and must always be that ty
 - all numbers are floats by default
 
 example: No difference between 5 and 5.0
+
+### Type Assignment & Type Inference
+
+```typescript
+function add(n1: number, n2: number, showResult: boolean, phrase: string) {
+  const result = n1 + n2;
+  if (showResult) {
+    console.log(phrase + result);
+  } else {
+    return result;
+  }
+}
+
+const number1 = 5; // type inference
+const number2 = 2.8;
+const printResult = true;
+const resultPhrase = 'Result is: ';
+
+add(number1, number2, printResult, resultPhrase);
+```
+
+- in the main part of the code (not in a function), if you declare a variable and initialize it to a value, (`const number1 = 5;`) TS uses type inference to understand that `number1` will always be of type `number`.
+- that is not to say that you cannot assign a type to the variable `number1` in the main part of the code, you just don't need to
+- here is how it would look if you did `let number1: number = 5;`
+  - however, this is redundant and not considered to be good practice
+- now, if you declare a variable but don't initialize it right off, then you should explicitly assign a type to it (`let number1: number;`)
 
 ## Section 3: The TypeScript Compiler (and its Configuration)
 
