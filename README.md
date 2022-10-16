@@ -15,6 +15,7 @@ Click [here](https://www.udemy.com/course/understanding-typescript/) to see the 
     - [Using Types](#using-types)
     - [TypeScript Types vs. JavaSCript Types](#typescript-types-vs-javascript-types)
     - [Type Casing](#type-casing)
+    - [Working with Numbers, Strings and Booleans](#working-with-numbers-strings-and-booleans)
   - [Section 3: The TypeScript Compiler (and its Configuration)](#section-3-the-typescript-compiler-and-its-configuration)
   - [Section 4: Next-generation JavaScript & TypeScript](#section-4-next-generation-javascript--typescript)
   - [Section 5: Classes & Interfaces](#section-5-classes--interfaces)
@@ -176,6 +177,13 @@ TS is statically typed (variables are declared a type and must always be that ty
 > It is `string` and `number` (etc.), **NOT** `String`, `Number`, etc.
 
 **The core primitive types in TypeScript are all lowercase!**
+
+### Working with Numbers, Strings and Booleans
+
+- as in JS, there is no difference between integers like the five here and floats or doubles
+- all numbers are floats by default
+
+example: No difference between 5 and 5.0
 
 ## Section 3: The TypeScript Compiler (and its Configuration)
 
